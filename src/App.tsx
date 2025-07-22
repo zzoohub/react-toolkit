@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./index.css";
+import { ThemeProvider, useTheme } from "../@theme/ThemeProvider";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function Demo() {
+  const { theme, setTheme } = useTheme();
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div style={{ padding: "2rem", textAlign: "center" }}>
+      <h1>🌍 Universal Theme Provider</h1>
+      <p>
+        Current theme: <strong>{theme}</strong>
+      </p>
+      <p style={{ fontSize: "0.9rem", opacity: 0.7 }}>
+        Works in Next.js, Vite, and any React environment!
+      </p>
+      <div style={{ gap: "1rem", display: "flex", justifyContent: "center" }}>
+        <button onClick={() => setTheme("light")}>☀️ Light</button>
+        <button onClick={() => setTheme("dark")}>🌙 Dark</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+      <div
+        style={{
+          marginTop: "2rem",
+          padding: "1rem",
+          border: "1px solid",
+          borderRadius: "8px",
+        }}
+      >
+        <h2>Sample Content</h2>
+        <p>This content adapts to the selected theme.</p>
+        <p style={{ fontSize: "0.8rem", fontFamily: "monospace" }}>
+          Runtime: {typeof window === "undefined" ? "Next.js Server" : "Client"}
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+function App() {
+  return (
+    <ThemeProvider>
+      <Demo />
+    </ThemeProvider>
+  );
+}
+
+export default App;
