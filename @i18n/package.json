@@ -1,7 +1,7 @@
 {
-  "name": "zzoo-react-theme",
+  "name": "zzoo-i18n",
   "version": "0.0.1",
-  "description": "A React theme provider with SSR support for light/dark mode switching",
+  "description": "Platform-agnostic internationalization library with TypeScript support",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -10,6 +10,10 @@
     ".": {
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/react/index.js",
+      "types": "./dist/react/index.d.ts"
     }
   },
   "files": [
@@ -24,20 +28,25 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
-    "react",
-    "theme",
-    "dark-mode",
-    "light-mode",
-    "ssr",
-    "typescript"
+    "i18n",
+    "internationalization",
+    "translation",
+    "localization",
+    "typescript",
+    "platform-agnostic"
   ],
   "author": "zzoo",
   "license": "MIT",
-  "peerDependencies": {
-    "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
-  },
+  "sideEffects": false,
   "devDependencies": {},
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/zzoohub/react-toolkit.git"
