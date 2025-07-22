@@ -31,29 +31,19 @@
     "ssr",
     "typescript"
   ],
-  "author": "Your Name",
+  "author": "zzoo",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
   },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^14.6.1",
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@vitest/coverage-v8": "^3.2.4",
-    "jsdom": "^26.1.0",
-    "typescript": "~5.8.3",
-    "vitest": "^3.2.4"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/react-theme.git"
+    "url": "https://github.com/zzoohub/react-theme.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/react-theme/issues"
+    "url": "https://github.com/zzoohub/react-theme/issues"
   },
-  "homepage": "https://github.com/your-username/react-theme#readme"
+  "homepage": "https://github.com/zzoohub/react-theme#readme"
 }

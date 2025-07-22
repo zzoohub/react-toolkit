@@ -1,3 +1,4 @@
-export { ThemeProvider, useTheme } from "./ThemeProvider";
-export { ServerThemeWrapper } from "./ServerThemeWrapper";
-export type { Theme, ThemeContextType, ThemeProviderProps } from "./type";
+export { ThemeProvider } from "./components/ThemeProvider";
+export { ServerThemeWrapper } from "./components/ServerThemeWrapper";
+export { useTheme } from "./hooks/useTheme";
+export type { Theme, ThemeContextType, ThemeProviderProps } from "./types";
