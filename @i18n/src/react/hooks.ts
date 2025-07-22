@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
-import type { Locale, Translation, Variables, TranslationOptions, Translator } from '../types';
+import { useState, useCallback, useMemo } from 'react';
+import type { Locale, Translation, Variables, TranslationOptions } from '../types';
 import { createTranslator } from '../core/translator';
 
 /**

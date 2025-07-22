@@ -53,9 +53,3 @@ export function createStorageAdapter(): StorageAdapter {
   return new CookieStorageAdapter();
 }
 
-/**
- * Create best available storage adapter
- */
-export function createBestStorageAdapter(): StorageAdapter {
-  return new CookieStorageAdapter();
-}

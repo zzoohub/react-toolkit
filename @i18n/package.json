@@ -1,5 +1,5 @@
 {
-  "name": "zzoo-i18n",
+  "name": "zzoo-react-i18n",
   "version": "0.0.1",
   "description": "Platform-agnostic internationalization library with TypeScript support",
   "type": "module",

@@ -10,7 +10,7 @@ import type {
 } from '../types';
 import { interpolate } from '../utils/interpolation';
 import { detectLocale } from '../utils/locale-detector';
-import { createStorageAdapter, createBestStorageAdapter } from './storage';
+import { createStorageAdapter } from './storage';
 
 /**
  * Simple LRU cache implementation for translations

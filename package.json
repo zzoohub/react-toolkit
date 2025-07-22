@@ -1,16 +1,20 @@
 {
   "name": "react-toolkit",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A monorepo containing reusable React packages for theme management and internationalization",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "npm run build:packages && tsc -b && vite build",
+    "build:packages": "cd @theme && npm run build && cd ../@i18n && npm run build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "npm run test:packages && vitest run",
+    "test:packages": "cd @theme && npm run test && cd ../@i18n && npm run test",
     "test:coverage": "vitest --coverage",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "clean": "rm -rf dist @theme/dist @i18n/dist"
   },
   "dependencies": {
     "react": "^19.1.0",

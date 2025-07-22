@@ -11,7 +11,7 @@ export { createTranslator, CoreTranslator };
 // Utilities
 export { interpolate, extractVariables, clearInterpolationCache } from './utils/interpolation';
 export { detectLocale, createLocaleDetector } from './utils/locale-detector';
-export { createStorageAdapter, createBestStorageAdapter } from './core/storage';
+export { createStorageAdapter } from './core/storage';
 
 // Import types for use in this file
 import type {
