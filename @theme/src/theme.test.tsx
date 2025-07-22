@@ -2,12 +2,7 @@ import React from "react";
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { ThemeProvider, useTheme, ServerThemeWrapper } from "./index";
-import type {
-  Theme,
-  ThemeContextType,
-  ThemeProviderProps,
-  ReadonlyRequestCookies,
-} from "./type";
+import type { Theme, ReadonlyRequestCookies } from "./type";
 
 const mockSetAttribute = vi.fn();
 let mockCookieValue = "";

@@ -1,6 +1,6 @@
 {
-  "name": "@zzoohub-react-toolkit/theme",
-  "version": "1.0.0",
+  "name": "zzoo-react-theme",
+  "version": "0.0.1",
   "description": "A React theme provider with SSR support for light/dark mode switching",
   "type": "module",
   "main": "./dist/index.js",

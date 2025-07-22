@@ -1,7 +1,7 @@
 export type Theme = "light" | "dark";
 export type ThemeContextType = {
   theme: Theme | undefined;
-  setTheme: (theme: Theme) => void;
+  setTheme: (theme: Theme | ((prevTheme: Theme) => Theme)) => void;
 };
 export type ThemeProviderProps = {
   theme?: Theme;

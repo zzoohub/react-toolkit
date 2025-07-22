@@ -44,10 +44,14 @@ export function ThemeProvider({
     }
   }, []);
 
-  const updateTheme = (newTheme: Theme) => {
-    setTheme(newTheme);
-    setCookie("theme", newTheme);
-    applyTheme(newTheme);
+  const updateTheme = (newTheme: Theme | ((prevTheme: Theme) => Theme)) => {
+    if (typeof newTheme === "function") {
+      setTheme(newTheme(theme as Theme));
+    } else {
+      setTheme(newTheme);
+      setCookie("theme", newTheme);
+      applyTheme(newTheme);
+    }
   };
 
   return (
