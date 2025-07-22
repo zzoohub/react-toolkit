@@ -1,5 +1,5 @@
 import "./index.css";
-import { ThemeProvider, useTheme } from "../@theme/ThemeProvider";
+import { ThemeProvider, useTheme } from "../@theme/src";
 
 function Demo() {
   const { theme, setTheme } = useTheme();

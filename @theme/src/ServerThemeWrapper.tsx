@@ -2,7 +2,7 @@
 
 import React from "react";
 import { ThemeProvider } from "./ThemeProvider";
-import { ReadonlyRequestCookies, Theme } from "./type";
+import type { ReadonlyRequestCookies, Theme } from "./type";
 
 export async function ServerThemeWrapper({
   cookies,
