@@ -37,16 +37,21 @@ export function ThemeProvider({
     if (theme) {
       applyTheme(theme);
     } else {
-      const theme = getCookie("theme");
-      if (theme) {
-        applyTheme(theme as Theme);
+      const cookieTheme = getCookie("theme");
+      if (cookieTheme) {
+        const themeValue = cookieTheme as Theme;
+        setTheme(themeValue);
+        applyTheme(themeValue);
       }
     }
-  }, []);
+  }, [theme]);
 
   const updateTheme = (newTheme: Theme | ((prevTheme: Theme) => Theme)) => {
     if (typeof newTheme === "function") {
-      setTheme(newTheme(theme as Theme));
+      const computed = newTheme(theme as Theme);
+      setTheme(computed);
+      setCookie("theme", computed);
+      applyTheme(computed);
     } else {
       setTheme(newTheme);
       setCookie("theme", newTheme);
