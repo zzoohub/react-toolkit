@@ -1,21 +1,19 @@
 "use server";
 
 import React from "react";
-import { ThemeProvider } from "./ThemeProvider";
+import { ClientThemeProvider } from "./ClientThemeProvider";
 import type { ReadonlyRequestCookies, Theme } from "../types";
 
-export async function ServerThemeWrapper({
+export async function ServerThemeProvider({
   cookies,
   children,
 }: {
   cookies: () => Promise<ReadonlyRequestCookies>;
   children: React.ReactNode;
 }) {
-  if (typeof window !== "undefined") {
-    return <ThemeProvider>{children}</ThemeProvider>;
-  }
-
   const cookieStore = await cookies();
   const theme = cookieStore.get("theme")?.value;
-  return <ThemeProvider theme={theme as Theme}>{children}</ThemeProvider>;
+  return (
+    <ClientThemeProvider theme={theme as Theme}>{children}</ClientThemeProvider>
+  );
 }
