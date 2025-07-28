@@ -25,6 +25,7 @@
     "dev": "tsc --watch",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
+    "publish": "npm run build && npm publish --access public",
     "prepublishOnly": "npm run build"
   },
   "keywords": [

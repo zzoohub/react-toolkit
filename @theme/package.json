@@ -1,6 +1,6 @@
 {
   "name": "zzoo-react-theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A React theme provider with SSR support for light/dark mode switching",
   "type": "module",
   "main": "./dist/index.js",
@@ -21,6 +21,7 @@
     "dev": "tsc --watch",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
+    "publish": "npm run build && npm publish --access public",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
